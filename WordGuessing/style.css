@@ -1,0 +1,53 @@
+body{
+    background-color: mediumseagreen;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    border: 1px solid grey;
+    margin: 2px;
+    padding: 2px;
+}
+
+.main{
+    width: 500px;
+    padding:30px 10px 30px 10px;
+}
+
+.gameHeader{
+    text-align: center;
+
+}
+
+.controls{
+    background-color: pink;
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#scrambledWord{
+    text-align: center;
+    font-size: 30px;
+}
+.gameBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+#wordInput{
+    width:80%;
+    height:20px;
+}
+
+#statusMessage{
+    text-align: center;
+}

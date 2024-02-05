@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guessing</title>
+    <script src="main.js" defer ></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="gameContainer">
+            <div class="gameHeader">
+                <h1>Guess the word</h1>
+                <p>Start a game, guess the word within 30 seconds.</p>
+            </div>
+            <div class="gameBody">
+                <div id="scrambledWord">Guess me!</div>
+                <input type="text" id="wordInput">
+                <div class="controls">
+                    <div id="timer"><span id="runningtime">00</span> seconds left</div>
+                        <button id="gameButton" onclick="startGame()">Start Game</button>
+                    </div>
+            </div>
+            <div class="gameFooter">
+                <div id="statusMessage">Your current Score is: <span id="score">0</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
