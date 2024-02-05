@@ -1,53 +1,150 @@
 body{
-    background-color: mediumseagreen;
+    background-color: rgb(47, 37, 61);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-div{
-    border: 1px solid grey;
-    margin: 2px;
-    padding: 2px;
+h1{
+    color: #004040;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.04px;
+    margin:0;
+}
+
+span.bold{
+    color: #004040;
+    font-family: "Bebas Neue";
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.04px;
 }
 
 .main{
     width: 500px;
-    padding:30px 10px 30px 10px;
+    padding:30px 10px 60px 10px;
+    background: rgba(173, 217, 217, 0.64);
 }
 
 .gameHeader{
     text-align: center;
+    width:100%
+
+}
+
+.gameHeader p{
+    height: 26px;
+    flex-shrink: 0;
+    color: #004040;
+    text-align: center;
+    font-family: Archivo;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 3rem 0;
+
 
 }
 
 .controls{
-    background-color: pink;
     padding:10px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
 #scrambledWord{
+    width: 308px;
+    height: 38px;
+    flex-shrink: 0;
+    color: #004040;
     text-align: center;
-    font-size: 30px;
+    font-family: Archivo;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
 }
 .gameBody{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
 }
 
 
 #wordInput{
-    width:80%;
-    height:20px;
+    width: 60%;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: rgba(173, 217, 217, 0.64);
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.25);
+    border:none;
 }
+
+input:focus{
+    outline: none;
+}
+
+input{
+    color: #004040;
+    text-align: center;
+    font-family: "IBM Plex Mono";
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom:1.5rem;
+}
+input[type="text"] {
+    text-transform: lowercase;
+}
+
 
 #statusMessage{
     text-align: center;
+}
+
+#timer{
+    color: #004040;
+    text-align: center;
+    font-family: Archivo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom:2rem;
+
+}
+
+button {
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #A4FAFA;
+    box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.25);
+    border:none;
+    margin-bottom:4rem;
+    font-family: Archivo;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 12px 24px 12px 24px;
+    color: #004040;
+
+
+
+}
+
+button:hover{
+    background: #a4fafaa9;
+    cursor:pointer;
+
 }

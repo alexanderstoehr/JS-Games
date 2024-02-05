@@ -6,19 +6,25 @@
     <title>Word Guessing</title>
     <script src="main.js" defer ></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Lato&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main">
         <div class="gameContainer">
             <div class="gameHeader">
-                <h1>Guess the word</h1>
-                <p>Start a game, guess the word within 30 seconds.</p>
+                <h1>Guess the <span class="bold">fruit</span></h1>
+                <p>Start a game, guess the fruit within 10 seconds.</p>
             </div>
             <div class="gameBody">
                 <div id="scrambledWord">Guess me!</div>
-                <input type="text" id="wordInput">
+                <input type="text" id="wordInput" placeholder="...">
                 <div class="controls">
-                    <div id="timer"><span id="runningtime">00</span> seconds left</div>
+                    <div id="timer"><span id="runningtime">10</span> seconds left</div>
                         <button id="gameButton" onclick="startGame()">Start Game</button>
                     </div>
             </div>
