@@ -29,7 +29,7 @@ let inputCheck = function (){
 }
 
 let showTimer = function (seconds) {
-    let timeLeft = seconds;
+    let timeLeft = seconds - 1;
     winStatus = false;
     
     counter = setInterval( function(){
@@ -40,7 +40,6 @@ let showTimer = function (seconds) {
             clearInterval(counter);
             scrambledWord.innerText = "YOU LOST!";
             gameButton.innerText = "Start new game";
-           
             gameButton.disabled = false;
         }
         if (timeLeft <= 5){
@@ -48,7 +47,7 @@ let showTimer = function (seconds) {
         }
         timeLeft--;
         
-        potentialScore = timeLeft;
+        potentialScore = timeLeft + 1;
     },1000)
 }
 
