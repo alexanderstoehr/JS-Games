@@ -1,11 +1,8 @@
-let wordList = ["apple","banana","cherry"];
+let wordList = ["APPLE","BANANA","CHERRY"];
 const gameLength = 10;
-let pickedWord;
-let randomizedWord;
-let winStatus;
-let counter;
-let potentialScore;
 let score = 0;
+let pickedWord, randomizedWord, winStatus, counter, potentialScore;
+
 
 let scrambledWord = document.getElementById("scrambledWord");
 let gameButton = document.getElementById("gameButton");
@@ -16,7 +13,8 @@ let userScore = document.getElementById("score");
 
 
 let inputCheck = function (){
-    if (inputValue.value.toLowerCase() === pickedWord){
+    console.log("x");
+    if (inputValue.value.toUpperCase() === pickedWord){
         scrambledWord.innerText = " YOU WON! FRUITY!";
         clearInterval(counter);
         gameButton.disabled = false;
@@ -71,6 +69,7 @@ let randomizeWord = function (word){
         console.log("secondtry");
         return word.split("").sort((a,b) => 0.5 - Math.random()).join("");
     }
+    
 }
 
 let startGame = function (){
@@ -78,7 +77,6 @@ let startGame = function (){
     timer.style.color = "unset";
     pickedWord = pickWord(wordList);
     randomizedWord = randomizeWord(pickedWord);
-    console.log(pickedWord);
     scrambledWord.innerText = randomizedWord;
     gameButton.innerText = "Game is running";
     showTimer(gameLength);
@@ -86,6 +84,5 @@ let startGame = function (){
     gameButton.disabled = true;
 
 }
-
 
 inputValue.addEventListener("input", inputCheck);
