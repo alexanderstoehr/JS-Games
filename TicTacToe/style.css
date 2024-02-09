@@ -1,0 +1,30 @@
+.main{
+    padding: 30px;
+}
+
+.gamearea{
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.field,.usedField {
+    width: 30px;
+    height: 30px;
+    border: solid 1px grey;
+    background-color: pink;
+    text-align: center;
+    vertical-align: middle;
+}
+.field:hover {
+    background-color:grey;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+button{
+    margin-top:2rem;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="main">
+        <div class="gameheader"></div>
+        <div class="gamearea">
+            <div id="tictactoearea">
+                <div class="row" id="row1">
+                    <div class="field" status="" row="1" col="1" id="r1f1"></div>
+                    <div class="field" status="" row="1" col="2"  id="r1f2"></div>
+                    <div class="field" status="" row="1" col="3"  id="r1f3"></div>
+                </div>
+                <div class="row" id="row2">
+                    <div class="field" status="" row="2" col="1"  id="r2f1"></div>
+                    <div class="field" status="" row="2" col="2"  id="r2f2"></div>
+                    <div class="field" status="" row="2" col="3"  id="r2f3"></div>
+                </div>
+                <div class="row" id="row3">
+                    <div class="field" status="" row="3" col="1"  id="r3f1"></div>
+                    <div class="field" status="" row="3" col="2"  id="r3f2"></div>
+                    <div class="field" status="" row="3" col="3"  id="r3f3"></div>
+                </div>
+              <span id="announcer">Its your turn</span>  
+            </div>
+            <button id="gamebutton">Start new Game</button>
+        </div>
+        <div class="gamefooter">Your current score: <span id="score">01</span></div>
+    </div>
+</body>
+</html>
