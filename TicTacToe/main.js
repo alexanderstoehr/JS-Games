@@ -1,6 +1,8 @@
 let fieldArr = document.getElementsByClassName("field")
 let gameButton = document.getElementById("gamebutton")
 let announcer = document.getElementById("announcer")
+let score = document.getElementById("score")
+let playerScore = 0
 
 
 let doStuff = function() {
@@ -8,7 +10,7 @@ let doStuff = function() {
         this.innerText = "X";
         this.setAttribute("class", "usedField");
     }
-    winStatus();
+    winStatus(1);
     botPlayer();
 }
 
@@ -31,12 +33,13 @@ function botPlayer(){
     } else {
         console.log("gameover");
     }
-    winStatus()
+    winStatus(0)
 }
 
-function winStatus(){
-    if(false){
-        announcer.innerText = "winner"
+function winStatus(n){
+    if(true){
+        announcer.innerText = "winner";
+        addScore(n)
     } else if (fieldArr.length === 0) {
         announcer.innerText = "not a bow but a tie"
     } else {
@@ -49,4 +52,7 @@ function winStatus(){
     //score +1 | -1
 }
 
-//f: scoring
+function addScore (n){
+    playerScore += 1
+    score.innerText = playerScore
+}
