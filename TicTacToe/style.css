@@ -14,7 +14,6 @@
     border: solid 1px grey;
     background-color: pink;
     text-align: center;
-    vertical-align: middle;
 }
 .field:hover {
     background-color:grey;

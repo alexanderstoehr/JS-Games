@@ -25,15 +25,13 @@ function botPlayer(){
     let botFields = document.getElementsByClassName("field")
     console.log(botFields);
     if (botFields.length > 0){
-    botPick = botFields[botFields.length - 1]
+    botPick = botFields[Math.round(Math.random() * botFields.length)]
     botPick.innerText = "O"
     botPick.setAttribute("class","usedField")
     } else {
         console.log("gameover");
     }
     winStatus()
-   //choose one and O it
-    console.log("bibabup");
 }
 
 function winStatus(){
