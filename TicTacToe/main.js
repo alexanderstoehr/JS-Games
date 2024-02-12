@@ -1,5 +1,6 @@
 let fieldArr = document.getElementsByClassName("field")
 let gameButton = document.getElementById("gamebutton")
+let announcer = document.getElementById("announcer")
 
 
 let doStuff = function() {
@@ -16,8 +17,8 @@ for (let i = 0; i < fieldArr.length; i++) {
 }
 
 function newGame(){
-    //reset board
-    //add points
+    location.reload();
+
 };
 
 function botPlayer(){
@@ -30,17 +31,23 @@ function botPlayer(){
     } else {
         console.log("gameover");
     }
-    
-    //choose one and O it
+    winStatus()
+   //choose one and O it
     console.log("bibabup");
 }
 
 function winStatus(){
+    if(false){
+        announcer.innerText = "winner"
+    } else if (fieldArr.length === 0) {
+        announcer.innerText = "not a bow but a tie"
+    } else {
+        announcer.innerText = "next Player"
+    }    
     //if 
     //1. all rows same
     //2. all cols same
     //3. all col === row
-    console.log("win true");;
     //score +1 | -1
 }
 
