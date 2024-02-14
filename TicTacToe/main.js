@@ -10,15 +10,20 @@ let botArr = []
 let hasWinner
 const winField = [[1 , 2 , 3 ],[ 4 , 5 , 6 ],[ 7 , 8 , 9 ],[ 1 , 4 , 7 ],[ 2 , 5 , 8 ],[ 3 , 6 , 9 ],[ 1 , 5 , 9 ],[ 3 , 5 , 7]]
 
-//---> decide who won
 //---> add or subtract score
 
 function checkWinStatus(arr) {
     winField.forEach(element => {
         hasWinner = arr.sort().toString().includes(element.toString());
         if (hasWinner) {
-            announcer.innerText = "X is the winner!";
             winStatus = true
+            if (arr === playerArr){
+                announcer.innerText = "X is the winner!";
+                addScore (1)
+            } else {
+                announcer.innerText = "0 is the winner!";
+                addScore (-1)
+            }
         }
     })      
     if (fieldArr.length === 0) {
@@ -84,6 +89,6 @@ for (let i = 0; i < fieldArr.length; i++) {
 }
 
 function addScore (n){
-    playerScore += 1
+    playerScore += n
     score.innerText = playerScore
 }
