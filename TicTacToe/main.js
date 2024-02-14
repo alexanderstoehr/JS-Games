@@ -3,6 +3,7 @@ let gameButton = document.getElementById("gamebutton")
 let announcer = document.getElementById("announcer")
 let score = document.getElementById("score")
 let playerScore = 0
+let winstatus
 
 
 let doStuff = function() {
@@ -37,6 +38,16 @@ function botPlayer(){
 }
 
 function winStatus(n){
+    if() {
+
+    } else if(){
+
+    } else if(){
+
+    } else {
+
+    }
+    
     if(true){
         announcer.innerText = "winner";
         addScore(n)
