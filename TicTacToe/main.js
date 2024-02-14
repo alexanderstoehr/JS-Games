@@ -1,4 +1,5 @@
 let fieldArr = document.getElementsByClassName("field")
+let usedFieldArr = document.getElementsByClassName("usedField")
 let gameButton = document.getElementById("gamebutton")
 let announcer = document.getElementById("announcer")
 let score = document.getElementById("score")
@@ -9,13 +10,14 @@ let botArr = []
 let hasWinner
 const winField = [[1 , 2 , 3 ],[ 4 , 5 , 6 ],[ 7 , 8 , 9 ],[ 1 , 4 , 7 ],[ 2 , 5 , 8 ],[ 3 , 6 , 9 ],[ 1 , 5 , 9 ],[ 3 , 5 , 7]]
 
+//---> decide who won
+//---> add or subtract score
+
 function checkWinStatus(arr) {
     winField.forEach(element => {
-        console.log(arr.sort().toString().includes(element.toString()));
         hasWinner = arr.sort().toString().includes(element.toString());
         if (hasWinner) {
             announcer.innerText = "X is the winner!";
-            console.log("yes");
             winStatus = true
         }
     })      
@@ -29,7 +31,18 @@ function checkWinStatus(arr) {
 }
 
 function newGame(){
-    location.reload();
+    console.log(usedFieldArr);
+    if( usedFieldArr.length > 0 ){
+        for (i = (usedFieldArr.length - 1) ; i >= 0; i--){
+            console.log(i);
+            usedFieldArr[i].innerText = "";
+            playerArr = []
+            botArr = []
+            winStatus = false
+            usedFieldArr[i].className = "field"
+            announcer.innerText = "Make the first move"
+        }
+    }
 };
 
 let humanPlayer = function() {
@@ -46,13 +59,16 @@ let humanPlayer = function() {
     }
 }
 
+
+// ----> check if chosen box undefined
+
 function botPlayer(){
     let botFields = document.getElementsByClassName("field")
-    console.log(botFields);
+    // console.log(botFields);
     if (botFields.length > 0){
     randIndex = Math.round(Math.random() * botFields.length)
     botPick = botFields[randIndex]
-    console.log(randIndex);
+    // console.log(botPick);
     botPick.innerText = "0"
     botPick.setAttribute("class","usedField")
     botPick.setAttribute("status", "0");
